@@ -1,0 +1,74 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block main %}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Blog -->
+                    <section>
+                        <header class="major">
+                            <h2>The Blog</h2>
+                        </header>
+                        <div class="row">
+                            <div class="col-12">
+                                <section class="box">
+                                    <a href="" class="image featured" ><img style="object-fit: cover; height: 300px;" src="{% static 'main/img/cp.png' %}" alt="" /></a>
+                                    <header>
+                                        <h3>Importance Of Comptetitve Programming</h3>
+                                        <p> Author: Pawandeep Singh, Executive Member</p>
+                                    </header>
+                                    <p>Competitive programming is a mind sport usually held over the Internet or a local network, involving participants trying to program according to provided specifications. A programming competition generally involves the host presenting a set of logical or mathematical problems to the contestants who are required to...</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="/blog/article" class="button icon solid fa-file-alt">Continue Reading</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                            <div class="col-12">
+                                <section class="box">
+                                    <a href="{% url 'blogupdate' %}" class="image featured"><img style="object-fit: cover; height: 300px;" src="{% static 'main/img/team.jpg' %}" alt="" /></a>
+                                    <header>
+                                        <h3>The Executive Team</h3>
+                                        <p>&nbsp; </p>
+                                    </header>
+                                    <p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="{% url 'blogupdate' %}" class="button icon solid fa-file-alt">Continue Reading</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                            <div class="col-12">
+                                <section class="box">
+                                    <a href="{% url 'blogupdate' %}" class="image featured"><img style="object-fit: cover; height: 300px;" src="{% static 'main/img/vision.png' %}" alt="" /></a>
+                                    <header>
+                                        <h3>Vision of BVCOE College Chapter</h3>
+                                        <p>Author: Bhavey Malik </p>
+                                    </header>
+                                    <p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="{% url 'blogupdate' %}" class="button icon solid fa-file-alt">Continue Reading</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                            
+                        </div>
+                    </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

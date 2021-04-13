@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Practice {% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block main %}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="display: flex; justify-content: center;">
+                <div class="custom-card">
+                    <h3>General Instructions:</h3>
+                    <hr/>
+                    <ul>
+                        <li>All the instructions and rules of a CodeChef Cook-Off are applicable in this category of practice
+                            contest.</li>
+                        <li>Cook-Offs after March, 2018 will have 6 problems instead of 5. Division 1 and division 2 are identical! </li>
+                        <li>You can create/participate in only one practice contest (of either of the three categories) at any
+                            instant of time.</li>
+                        <li>We believe that it is alright to refer to tutorials, books and other materials, learn a concept
+                            and
+                            then apply the same to solve a problem during a practice contest. But it is not alright to copy other
+                            people&#39;s solutions or seek other people&#39;s help to solve a problem without understanding
+                            it.</li>
+                        <li><b>Since, v1.0 of CodeChef API does not provide us with the option to 'submit' problems on behalf of users, Submit the solution on the CodeChef Platform and click on the 'Check' button in the contest page to confirm.</b>
+                        </li>
+
+                    </ul>
+                    <hr />
+                    <h2>Select a Cook-Off:</h2>
+                    <hr />
+                    <div class="row">
+                        {% for cookoff in cookoffs %}
+                        <div class="col-4 col-6-medium col-12-small" >
+                            <a href="/contest/practice/cookoff/create/{{cookoff.code}}" style="text-decoration: none;">
+                            <section class="box enlarge2" style="display: flex; justify-content: center;border-radius: 15px; border-color:rgb(120,220,142);">
+                                <header>
+                                    <h3>{{cookoff.name }}</h3>
+                                    <h4>{{cookoff.code}}</h4>
+                                </header>
+                                <footer>
+                                    <a class="button submit"  href="/contest/practice/cookoff/create/{{cookoff.code}}">Enter</a> 
+                                </footer>
+                            </section>
+                            </a>
+                        </div>
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+   
+  
+
+
+
+   
+    {% endblock %}
+    {% block post-js %}
+    {% include 'core/hard_refresh_on_back_button_click.html' %}
+    {% endblock %}

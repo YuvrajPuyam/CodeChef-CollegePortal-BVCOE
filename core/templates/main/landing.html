@@ -1,0 +1,228 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block intro %}
+
+<div class="carousel">
+    <div class="slides">
+      <img src="{% static 'main/img/carousel1.jpg' %}" alt="slide image" class="slide" style="object-fit: scale-down;" >
+      <img src="{% static 'main/img/carousel4.png' %}" alt="slide image" class="slide" style="object-fit: scale-down;">
+      <img src="{% static 'main/img/carousel3.png' %}" alt="slide image" class="slide" id="carouselclick" style="cursor: pointer; object-fit: scale-down" >
+    </div>
+    <div class="controls">
+      <div class="control prev-slide">&#9668;</div>
+      <div class="control next-slide">&#9658;</div>
+    </div>
+  </div>
+
+
+<section id="intro" class="container">
+    <div class="row">
+        <div class="col-4 col-12-medium">
+            <section class="first">
+                <a href="{% url 'blog' %}" class="icon solid featured fa-bolt enlarge" ></a>
+                <header>
+                    <h2>Stay Updated</h2>
+                </header>
+                <p>Get Information about learning sources, contests and sessions.</p>
+            </section>
+            </a>
+        </div>
+
+        <div class="col-4 col-12-medium">
+            <section class="middle">
+                <a href="{% url 'practicelanding' %}" class="icon solid featured alt fa-code  enlarge"></a>
+                <header>
+                    <h2 >Practice</h2>
+                </header>
+                <p>Practice Comptetitve Programming Questions.</p>
+                
+            </section>
+        </div>
+        <div class="col-4 col-12-medium">
+            <section class="last">
+                <a href="{% url 'leaderboard' %}" class="icon solid featured alt2 fa-star enlarge"></a>
+                <header>
+                    <h2>Leader Boards</h2>
+                </header>
+                <p>Check College Rankings for codechef Competitions!</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <ul class="actions">
+            <li><a href="https://www.codechef.com/college-chapter/member" class="button large">Become a Member</a></li>
+            {% if not request.user.is_authenticated %}
+            <li><a href="https://api.codechef.com/oauth/authorize?response_type=code&client_id={{client_id}}&state={{state}}&redirect_uri={{redirection_url}}/oauth/success" class="button alt large">Log in</a></li>
+            {% endif %}
+        </ul>
+    </footer>
+</section>
+
+</section>
+
+{% endblock %}
+
+{% block main %}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Blog -->
+                    <section>
+                        <header class="major">
+                            <h2>The Blog</h2>
+                        </header>
+                        <div class="row">
+                            <div class="col-6 col-12-small">
+                                <section class="box">
+                                    <a href="blog/article" class="image featured"><img src="{% static 'main/img/cp.png' %}" alt="" /></a>
+                                    <header>
+                                        <h3>Importance Of Comptetitve Programming</h3>
+                                        <p> Author: Pawandeep Singh, Executive Member</p>
+                                    </header>
+                                    <p>Competitive programming is a mind sport usually held over the Internet or a local network, involving participants trying to program according to provided specifications. A programming competition generally involves the host presenting a set of logical or mathematical problems to the contestants who are required to ....</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="blog/article" class="button icon solid fa-file-alt">Continue Reading</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                            <div class="col-6 col-12-small">
+                                <section class="box">
+                                    <a href="{% url 'blogupdate' %}" class="image featured"><img src="{% static 'main/img/team.jpg' %}" alt="" /></a>
+                                    <header>
+                                        <h3>The Executive Team</h3>
+                                        <p>&nbsp; </p>
+                                    </header>
+                                    <p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="{% url 'blogupdate' %}" class="button icon solid fa-file-alt">Continue Reading</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+
+            </div>
+        </div>
+        
+        <div class="col-12">
+
+            <!-- Portfolio -->
+                <section>
+                    <header class="major">
+                        <h2>The Core Team </h2>
+                    </header>
+                    <div class="row">
+                        <div class="col-4 col-6-medium col-12-small">
+                            <section class="box">
+                                <a href="#" class="image featured"><img src="{% static 'main/img/Profile/Nikita.jfif' %}" alt="" /></a>
+                                <header>
+                                    <h3>Mrs. Nikita Jain</h3>
+                                    <h4>Faculty Advisor</h4>
+                                </header>
+                                <p>Guiding and supporting the students with planning and facilitating events and workshop,Strengthing and influencing as well as bbeing the advocate for competitive programming on campus.</p>
+                                <footer>
+                                    <ul class="social" style="margin-bottom: 0;">
+                                        <li><a class="icon brands fa-linkedin" href=" https://www.linkedin.com/in/nikita-jain-7a03ba55/"><span class="label"></span></a></li>
+                                        <li><a class="icon brands fab fa-github" href="https://github.com/jainnikita12" style="background-color: black;"><span class="label"></span></a></li>
+                                        <li><a class="fas fa-university" href="https://www.cse.bvcoend.ac.in/site/home/index/229"><span class="label "></span></a></li>
+                                        
+                                    </ul>
+                                </footer>
+                            </section>
+                        </div>
+                        <div class="col-4 col-6-medium col-12-small">
+                            <section class="box">
+                                <a href="#" class="image featured"><img src="{% static 'main/img/Profile/Ishita.jpg' %}" alt="" /></a>
+                                <header>
+                                    <h3>Ishita</h3>
+                                    <h4>President</h4>
+                                </header>
+                                <p>The Chapter President is responsible for shaping the Competitive Programming culture on campus, to inspire and connect team members towards the vision, awith a passion for programming.</p>
+                                <footer>
+                                    <ul class="social" style="margin-bottom: 0;">
+                                        <li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/ishita-gambhir"><span class="label"></span></a></li>
+                                        <li><a class="icon brands fab fa-github" href="https://github.com/mewcifur28" style="background-color: black;"><span class="label"></span></a></li>
+                                    </ul>
+                                </footer>
+                            </section>
+                        </div>
+                        <div class="col-4 col-6-medium col-12-small">
+                            <section class="box">
+                                <a href="#" class="image featured"><img src="{% static 'main/img/Profile/yuv.jpeg' %}" alt="" /></a>
+                                <header>
+                                    <h3>Yuvraj Puyam</h3>
+                                    <h4>Competitve Programming Lead</h4>
+                                </header>
+                                <p>The CP lead is in charge of the events organized by the Chapter, well versed in data structures and algorithms, an experienced competitive programmer who loves spending time resolving doubts of peers.</p>
+                                <footer>
+                                    <ul class="social" style="margin-bottom: 0;">
+                                        <li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/yuvraj-puyam-3066b513b/"><span class="label"></span></a></li>
+                                        <li><a class="icon brands fab fa-github" href="https://github.com/YuvrajPuyam" style="background-color: black;"><span class="label"></span></a></li>
+                                    </ul>
+                                </footer>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:1em">
+                        <div class="row" style="display: inline-flex; justify-content: center;">
+                            <div class="col-4 col-6-medium col-12-small">
+                                <section class="box">
+                                    <a href="#" class="image featured"><img src="{% static 'main/img/Profile/ritika.jpeg' %}" alt="" /></a>
+                                    <header>
+                                        <h3>Ritika Dhawan</h3>
+                                        <h4>Events Lead</h4>
+                                    </header>
+                                    <p>The Events Lead is responsible for organizing events that add value to the learning of the students on campus, enthusiastic, and possess excellent organizational and multitasking skills.</p>
+                                    <footer>
+                                        <ul class="social" style="margin-bottom: 0;">
+                                            <li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/ritika-dhawan-7a5bb2190"><span class="label"></span></a></li>
+                                            <li><a class="icon brands fab fa-github" href="https://github.com/ritikadhawan" style="background-color: black;"><span class="label"></span></a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <section class="box">
+                                    <a href="#" class="image featured"><img src="{% static 'main/img/Profile/mayan.jpeg' %}" alt="" /></a>
+                                    <header>
+                                        <h3>Mayan Sharma</h3>
+                                        <h4>Outreach and Media Lead</h4>
+                                    </header>
+                                    <p>Responsible for bringing everyone together, ensuring that students on campus are aware of Competitive Programming,well networked, possess excellent communication skills, and have a go-getter attitude.</p>
+                                    <footer>
+                                        <ul class="social" style="margin-bottom: 0; ;">
+                                            <li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/mayan-sharma-794544183/"><span class="label"></span></a></li>
+                                            <li><a class="icon brands fab fa-github" href="https://www.codechef.com/users/d35mond" style="background-color: black;"><span class="label"></span></a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                    </div>
+                </section>
+
+        </div>
+        
+    </div>
+</section>
+{% endblock %}
+
+{% block post-js %}
+<script>
+$("#carouselclick").click(function() {
+    window.location.href = 'https://instagram.com/codechef_bvcoe'
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>BVCOE Chapter Portal | {% block title %} {% endblock %}</title>
+		<meta charset="utf-8" />
+		{% block meta %}{% endblock %}
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'main/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'main/css/second.sass' %}" />
+		<link rel="icon" type="image/png" sizes="96x96" href="{% static 'main/img/1.png' %}">
+		
+		{% block css %} {% endblock %}
+
+		{% block pre-js %} {% endblock %}
+	</head>
+    <body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" style="padding-top: 1em;">
+
+					<!-- Logo -->
+						<div id="logo" style="display: inline-flex; justify-content: center;">
+							<a href="{% url 'home' %}"><img src="{% static 'main/img/cc.jfif' %}" alt="" style="height: 150px;"></a>
+							<h1 style="display:flex; align-items: center;"><a class="logo" href="{% url 'home' %}" >College Portal</a></h1>
+						</div>
+                        {% block nav %} {% endblock %}
+                        {% block intro %} {% endblock %}
+                </section>
+                {% block main %} {% endblock%}
+               			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-8 col-12-medium">
+								<section>
+									<header>
+										<h2>Upcoming Contests</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Apr <strong>3</strong></span>
+											<h3><a href="https://www.codechef.com/APRIL21?itm_medium=hpbanner&itm_campaign=AprilLC">April Long Challenge</a></h3>
+											<p>CodeChef Long Challenge is a 10-day monthly coding contest where you can show off your computer programming skills.</p>
+										</li>
+										<li>
+											<span class="date">Apr <strong>23</strong></span>
+											<h3><a href="#">CodeChef April LunchTime</a></h3>
+											<p>This Lunchtime is a 2.5 hours coding contest where you can show off your computer programming skills.</p>
+										</li>
+										<li>
+											<span class="date">Apr <strong>28</strong></span>
+											<h3><a href="#">CodeChef Cook-Off</a></h3>
+											<p>CodeChef Cook-Off is a two and half hour coding contest where you can show off your computer programming skills.</p>
+										</li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Vision Of The College Chapter</h2>
+									</header>
+									<a href="{% url 'blogupdate' %}" class="image featured"><img  style="border-radius: 20px;"src="{% static 'main/img/vision.png' %}" alt="" /></a>
+									
+									<footer>
+										<ul class="actions">
+											<li><a href="{% url 'blogupdate' %}" class="button">Find out more</a></li>
+										</ul>
+									</footer>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<p>
+												Bharati Vidyapeeth's College Of Engineering<br />
+												A-4 Block, Paschim Vihar, New Delhi<br />
+												Delhi, 110010
+											</p>
+										</li>
+
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Mail</h3>
+											<p><a href="mailto:codechefbvcoe@gmail.com">codechefbvcoe@gmail.com</a></p>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<p>+91 90130 64730</p>
+											<p>+91 72176 51503</p>
+										</li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Connect</h2>
+									</header>
+									<ul class="social">
+										<li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/company/codechef-bvcoe-chapter"><span class="label">LinkedIn</span></a></li>
+										<li><a class="icon brands fa-instagram" style="background:#DC6565;" href="https://instagram.com/codechef_bvcoe"><span class="label">Instagram</span></a></li>
+										<li><a class="icon brands fa-whatsapp"style="background:#128C7E;" href="https://chat.whatsapp.com/GMYXCCUayf91rF0uNOzCz3"><span class="label">Whatsapp</span></a></li>
+										<li><a class="icon brands fa-facebook" href="https://www.facebook.com/CodeChef-BVCOE-Chapter-116055826975459"><span class="label">Facebook</span></a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="{% static 'main/js/jquery.min.js'%}"></script>
+			<script src="{% static 'main/js/jquery.dropotron.min.js'%}"></script>
+			<script src="{% static 'main/js/jbrowser.min.js'%}"></script>
+			<script src="{% static 'main/js/breakpoints.min.js'%}"></script>
+			<script src="{% static 'main/js/util.js'%}"></script>
+			<script src="{% static 'main/js/main.js'%}"></script>
+			{% block post-js %} {% endblock %}
+
+	</body>
+</html>

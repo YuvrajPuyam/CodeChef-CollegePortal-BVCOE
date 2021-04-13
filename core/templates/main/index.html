@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" style="padding-top: 1em;">
+
+					<!-- Logo -->
+						<div id="logo" style="display: inline-flex; justify-content: center;">
+							<img src="cc.jfif" alt="" style="height: 150px;">
+							<h1 style="display:flex; align-items: center;"><a class="logo" href="index.html" >College Portal</a></h1>
+						</div>
+						
+
+					<!-- Nav -->
+						<nav id="nav" style="margin-top:.5em">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li class="middle"><a href="left-sidebar.html" > Practice   </a></li>
+								<li class="middle" ><a href="left-sidebar.html"> Blog</a></li>
+								<li class="middle">
+									<a href="right-sidebar.html">Leaderboards</a>
+									<ul style="text-align: center;">
+										<li><a href="#">College Leaderboards</a></li>
+										<li> <a href="#">Contests</a>
+											<ul>
+												<li><a href="#">March Challenge</a></li>
+												<li><a href="#">March Cook-Off</a></li>
+												<li><a href="#">March LunchTime</a></li>
+											</ul>
+										</li>
+										
+									</ul>
+								</li>
+								<li class="login"><a  href="no-sidebar.html">Log in</a></li>
+							</ul>
+						</nav>
+						<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:3em ;">
+							<div class="carousel-inner">
+							  <div class="carousel-item active">
+								<img class="d-block w-100" src="images/carousel1.png" alt="First slide">
+							  </div>
+							  <div class="carousel-item">
+								<img class="d-block w-100" src="images/carousel2.png" alt="Second slide">
+							  </div>
+							  <div class="carousel-item">
+								<img class="d-block w-100" src="images/pic01.jpg" alt="Third slide">
+							  </div>
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+							  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							  <span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+							  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							  <span class="sr-only">Next</span>
+							</a>
+						  </div>
+					<!-- Intro -->
+						<section id="intro" class="container">
+							<div class="row">
+								<div class="col-4 col-12-medium">
+									<section class="first">
+										<a href="left-sidebar.html" class="icon solid featured fa-code"></a>
+										<header>
+											<h2>Practice</h2>
+										</header>
+										<p>Practice Comptetitve Programming Questions.</p>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="middle">
+										<i class="icon solid featured alt fa-bolt"></i>
+										<header>
+											<h2>Stay Updated</h2>
+										</header>
+										<p>Get Latest Information about learning sources, contests and sessions.</p>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="last">
+										<i class="icon solid featured alt2 fa-star"></i>
+										<header>
+											<h2>Leader Boards</h2>
+										</header>
+										<p>Check College Rankings for codechef Competitions!</p>
+									</section>
+								</div>
+							</div>
+							<footer>
+								<ul class="actions">
+									<li><a href="#" class="button large">Become a Member</a></li>
+									{% if request.user.is_authenticated %}
+									<li><a href="#" class="button alt large">Log in</a></li>
+									{% endif %}
+								</ul>
+							</footer>
+						</section>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Portfolio -->
+									<section>
+										<header class="major">
+											<h2>The Core Team </h2>
+										</header>
+										<div class="row">
+											<div class="col-4 col-6-medium col-12-small">
+												<section class="box">
+													<a href="#" class="image featured"><img src="images/Profile/Nikita.jfif" alt="" /></a>
+													<header>
+														<h3>Mrs. Nikita Jain</h3>
+														<h4>Faculty Advisor</h4>
+													</header>
+													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore. Boop bop ooopps orem blandit adipiscing </p>
+													<footer>
+														<ul class="social" style="margin-bottom: 0;">
+															<li><a class="icon brands fa-linkedin" href="#"><span class="label"></span></a></li>
+															<li><a class="icon brands fab fa-github" href="#" style="background-color: black;"><span class="label"></span></a></li>
+														</ul>
+													</footer>
+												</section>
+											</div>
+											<div class="col-4 col-6-medium col-12-small">
+												<section class="box">
+													<a href="#" class="image featured"><img src="images/Profile/Ishita.jpg" alt="" /></a>
+													<header>
+														<h3>Ishita</h3>
+														<h4>President</h4>
+													</header>
+													<p>The Chapter President is responsible for shaping the Competitive Programming culture on campus, to inspire and connect team members towards the vision, awith a passion for programming.</p>
+													<footer>
+														<ul class="social" style="margin-bottom: 0;">
+															<li><a class="icon brands fa-linkedin" href="#"><span class="label"></span></a></li>
+															<li><a class="icon brands fab fa-github" href="#" style="background-color: black;"><span class="label"></span></a></li>
+														</ul>
+													</footer>
+												</section>
+											</div>
+											<div class="col-4 col-6-medium col-12-small">
+												<section class="box">
+													<a href="#" class="image featured"><img src="images/Profile/yuv.jpeg" alt="" /></a>
+													<header>
+														<h3>Yuvraj Puyam</h3>
+														<h4>Competitve Programming Lead</h4>
+													</header>
+													<p>The CP lead is in charge of the events organized by the Chapter, well versed in data structures and algorithms, an experienced competitive programmer who loves spending time resolving doubts of peers.</p>
+													<footer>
+														<ul class="social" style="margin-bottom: 0;">
+															<li><a class="icon brands fa-linkedin" href="#"><span class="label"></span></a></li>
+															<li><a class="icon brands fab fa-github" href="#" style="background-color: black;"><span class="label"></span></a></li>
+														</ul>
+													</footer>
+												</section>
+											</div>
+										</div>
+										<div class="row" style="margin-top:1em">
+											<div class="row" style="display: inline-flex; justify-content: center;">
+												<div class="col-4 col-6-medium col-12-small">
+													<section class="box">
+														<a href="#" class="image featured"><img src="images/Profile/ritika.jpeg" alt="" /></a>
+														<header>
+															<h3>Ritika Dhawan</h3>
+															<h4>Events Lead</h4>
+														</header>
+														<p>The Events Lead is responsible for organizing events that add value to the learning of the students on campus, enthusiastic, and possess excellent organizational and multitasking skills.</p>
+														<footer>
+															<ul class="social" style="margin-bottom: 0;">
+																<li><a class="icon brands fa-linkedin" href="#"><span class="label"></span></a></li>
+																<li><a class="icon brands fab fa-github" href="#" style="background-color: black;"><span class="label"></span></a></li>
+															</ul>
+														</footer>
+													</section>
+												</div>
+												<div class="col-4 col-6-medium col-12-small">
+													<section class="box">
+														<a href="#" class="image featured"><img src="images/Profile/mayan.jpeg" alt="" /></a>
+														<header>
+															<h3>Mayan Gupta</h3>
+															<h4>Outreach and Media Lead</h4>
+														</header>
+														<p>Responsible for bringing everyone together, ensuring that students on campus are aware of Competitive Programming,well networked, possess excellent communication skills, and have a go-getter attitude.</p>
+														<footer>
+															<ul class="social" style="margin-bottom: 0; ;">
+																<li><a class="icon brands fa-linkedin" href="#"><span class="label"></span></a></li>
+																<li><a class="icon brands fab fa-github" href="#" style="background-color: black;"><span class="label"></span></a></li>
+															</ul>
+														</footer>
+													</section>
+												</div>
+										</div>
+
+
+
+									</section>
+
+							</div>
+							<div class="col-12">
+
+								<!-- Blog -->
+									<section>
+										<header class="major">
+											<h2>The Blog</h2>
+										</header>
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<section class="box">
+													<a href="#" class="image featured"><img src="images/blog1.jpg" alt="" /></a>
+													<header>
+														<h3>Importance Of Comptetitve Programming</h3>
+														<p> Author: Pawandeep Singh</p>
+													</header>
+													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+													<footer>
+														<ul class="actions">
+															<li><a href="#" class="button icon solid fa-file-alt">Continue Reading</a></li>
+														</ul>
+													</footer>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section class="box">
+													<a href="#" class="image featured"><img src="images/blog2.jpg" alt="" /></a>
+													<header>
+														<h3>The Exectuive Team</h3>
+														<p>Posted 45 minutes ago</p>
+													</header>
+													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+													<footer>
+														<ul class="actions">
+															<li><a href="#" class="button icon solid fa-file-alt">Continue Reading</a></li>
+														</ul>
+													</footer>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-8 col-12-medium">
+								<section>
+									<header>
+										<h2>Upcoming Contests</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Apr <strong>3</strong></span>
+											<h3><a href="#">April Long Challenge</a></h3>
+											<p>CodeChef Long Challenge is a 10-day monthly coding contest where you can show off your computer programming skills.</p>
+										</li>
+										<li>
+											<span class="date">Apr <strong>23</strong></span>
+											<h3><a href="#">CodeChef April LunchTime</a></h3>
+											<p>This Lunchtime is a 2.5 hours coding contest where you can show off your computer programming skills.</p>
+										</li>
+										<li>
+											<span class="date">Apr <strong>28</strong></span>
+											<h3><a href="#">MCodeChef Cook-Off</a></h3>
+											<p>CodeChef Cook-Off is a two and half hour coding contest where you can show off your computer programming skills.</p>
+										</li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Vision Of The College Chapter</h2>
+									</header>
+									<a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
+									
+									<footer>
+										<ul class="actions">
+											<li><a href="#" class="button">Find out more</a></li>
+										</ul>
+									</footer>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<p>
+												Untitled Incorporated<br />
+												1234 Somewhere Road Suite<br />
+												Nashville, TN 00000-0000
+											</p>
+										</li>
+
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Mail</h3>
+											<p><a href="#">someone@untitled.tld</a></p>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<p>(800) 000-0000</p>
+										</li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Connect</h2>
+									</header>
+									<ul class="social">
+										<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+										<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+										<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+										<li><a class="icon brands fa-tumblr" href="#"><span class="label">Tumblr</span></a></li>
+										<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

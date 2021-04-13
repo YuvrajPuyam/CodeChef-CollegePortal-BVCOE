@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Practice | Cook-Off | Chef's Arena {% endblock %}
+{% block body %}
+<div class="main">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/contest/practice">Practice</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cook-Off</li>
+        </ol>
+    </nav>
+    <div class="custom-card">
+        <h4>LeaderBoard</h4>
+        <hr />
+        <div class="row">
+        
+            {% for rank in rankings %}
+    
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 20px;">
+                <p>{{rank.collegeRanking}} <b>{{rank.name}}</b> <br /> {{ rank.rating }}<br />
+                <hr class="no-margin no-padding" />
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+    {% block post-js %}
+    {% include 'core/hard_refresh_on_back_button_click.html' %}
+    {% endblock %}

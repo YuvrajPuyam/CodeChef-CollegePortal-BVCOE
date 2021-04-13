@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Practice {% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block main %}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="display: flex; justify-content: center; ">
+                <div class="custom-card">
+                    
+                    <ul>
+                        <li><b>Since, v1.0 of CodeChef API does not provide us with the option to 'submit' problems on behalf of users, Submit the solution on the CodeChef Platform and click on the 'Check' button in the contest page to confirm.</b>
+                        </li>
+
+                    </ul>
+
+                    <h2>Available Problemsets:</h2>
+                    <hr/>
+                    
+                    <div class="row">
+                        {% for set in custom_sets %}
+                        <div class="col-3 col-6-medium col-12-small" >
+                            <a href="/contest/practice/cookoff/create/{{cookoff.code}}" style="text-decoration: none;">
+                            <section class="box enlarge2" style=" border-radius: 15px; border-color:rgb(120,220,142);">
+                                <header>
+                                    <h3>{{ set.title }}</h3>
+                                    <h4>{{ set.description }}</h4>
+                                </header>
+                                <b> Author: </b> 
+                                <a href="{% url 'profile' set.author.username %}" target="_blank" class="userlink">{{set.author.username}}</a><br />
+                                <b>Duration:</b>  {{set.duration}} minutes.<br />
+                                <b>Number of problem(s):</b>  {{ set.problems.count }} <br/>
+                                <footer>
+                                    <a class="button submit" href="/contest/practice/custom/solve/{{set.unique_id}}" style="margin-top: 5px;">Solve</a></p>
+                                </footer>
+                            </section>
+                            </a>
+                        </div>
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   
+    {% endblock %}
+    {% block post-js %}
+    {% include 'core/hard_refresh_on_back_button_click.html' %}
+    {% endblock %}

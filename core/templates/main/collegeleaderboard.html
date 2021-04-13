@@ -1,0 +1,94 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Leaderboards {% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block main %}
+
+<section id="main">
+    <div class="container">
+        <div  style="display: flex; justify-content: center;">
+        <section style="width: 95%; display: inline-flexbox; justify-content: center;">
+            <h3 style="margin-bottom: 1em; text-decoration: underline;">Bharati Vidyapeeth's CodeChef Leaderboard</h3>
+            <div class="table-wrapper" style="display: flex; justify-content: space-between;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>College Rank</th>
+                            <th>User Name</th>
+                            <th>Global Rank</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rank in rankings %}
+                        <tr>
+                            <td>{{ rank.collegerank }}</td>
+                            <td><a class="userlink stars{{rank.stars}}" style="color: white;padding:2px 2px;">{{rank.stars}}<i class="icon fas fa-star "></i><span class="label"></span></a>&nbsp; <a class="userlink"href="{% url 'profile' rank.username %}">{{rank.username }}</a></td>
+                            <td>{{rank.globalranking}}</td>
+                            <td>{{rank.rating }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+        </section>
+    </div>
+    <div  style="display: flex; justify-content: center;">
+        <section style="width: 95%; display: inline-flexbox; justify-content: center; width: 70%;">
+            <div class="table-wrapper" style="display: flex; justify-content: space-between;">
+                <table>
+                    <tbody>
+                        <tr>
+                            {% if rankings.has_previous %}
+                            <td>
+                                <a class="button" href="?page=1">First</a>
+                            </td>
+                            <td>
+                                <a class="button alt" href="?page={{rankings.previous_page_number}}">←</a>
+                            </td>
+                            {% else %}
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            {% endif %}
+                            {% for num in p.page_range%}
+                                {% if num == p_num %}
+                                <td> 
+                                    <a class="button " href="" style="background:grey">{{page_num}}</a>
+                                </td>
+                                {% elif num > p_num|add:'-3' and num < p_num|add:'3' %}
+                                <td>
+                                <a class="button " href="?page={{num}}" >{{num}}</a>
+                                </td>
+                                {% endif%}
+                            {% endfor %}
+                            
+                            {% if rankings.has_next %}
+                            <td >
+                                <a class="button alt" href="?page={{rankings.next_page_number}}">→</a>
+                            </td>
+                            <td>
+                                <a class="button " href="?page={{last}}">Last</a>
+                            </td>   
+                            {% endif %}
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    </div>
+</section>
+
+
+{% endblock %}

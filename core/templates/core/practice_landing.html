@@ -1,0 +1,115 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Practice {% endblock %}
+
+
+{% block css %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/practice-landing.css' %}">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'core/css/timer.css' %}">
+{% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block intro %}
+{% if contest %}
+<section id="main" style="margin-top: 2em;">
+            <div class="col-12" style="display: flex; justify-content: center; text-align: center; ">
+                
+                   
+                    <article class="box post" style="border-radius:20px ;">
+                    <h5 class="text-center">
+                        You have an active practice contest!
+                        <br /> (You must complete/end it to create another practice contest!)
+                        <br />
+                        The contest ends in:
+                    </h5>
+                    <div id="timer">
+                        <ul class="no-padding">
+                            <li>
+                                <div class="number" id="hours">00</div>
+                                <div>Hours</div>
+                            </li>
+                            <li>
+                                <div class="number" id="minutes">00</div>
+                                <div>Minutes</div>
+                            </li>
+                            <li>
+                                <div class="number" id="seconds">00</div>
+                                <div>Seconds</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href='/contest/practice/{{ contest.unique_id }}' class="btn btn-outline-success btn-sm">Enter</a>
+                    &nbsp;
+                    <a href='/contest/practice/{{ contest.unique_id }}/end' class="btn btn-outline-danger btn-sm">End contest</a>
+                    
+                </article>
+              
+            </div>
+            
+</section>
+{% endif %}  
+<section id="intro" class="container" style="margin-top: 1.5em;">
+    <div class="row">
+        <div class="col-4 col-12-medium">
+            <section class="first">
+                {% if not contest %}
+                    <a href="/contest/practice/cookoff"" class="icon solid featured  fa-award enlarge" ></a>
+                {% else %}
+                <i class="icon solid featured fa-award " ></i>
+                {% endif %}
+                <header>
+                    <h2>Past Cook-Offs</h2>
+                </header>
+                <p class="card-text">Missed a Cook-Off ? Solve its problems in a contest like environment! </p>
+                    
+            </section>
+            </a>
+        </div>
+
+        <div class="col-4 col-12-medium">
+            <section class="middle">
+                {% if not contest %}
+                <a href="/contest/practice/random" class="icon solid featured alt fa-random  enlarge"></a>
+                {% else %}
+                <i class="icon solid featured alt fa-random "></i>
+                {% endif %}
+                
+                <header>
+                    <h2 >Generate Practice Contest</h2>
+                </header>
+                <p class="card-text">Create a custom contest where the questions are randomly selected from the
+                    past Cook-Offs</p>
+                
+            </section>
+        </div>
+        <div class="col-4 col-12-medium">
+            <section class="last">
+                {% if not contest %}
+                <a href="/contest/practice/custom" class="icon solid featured alt2 fa-pencil-alt enlarge"></a>
+                {% else %}
+                <i class="icon solid featured alt2 fa-pencil-alt "></i>
+                {% endif %}
+                <header>
+                    <h2>Custom Contest</h2>
+                </header>
+                <p class="card-text">Missed a Cook-Off ? Solve its problems in a contest like environment! </p>
+                    
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock%}
+
+{% block main%}
+
+{% endblock %}
+{% if not contest %}
+{% block post-js %}
+{% include 'core/hard_refresh_on_back_button_click.html' %}
+{% include 'core/timer.html' %}
+{% endblock %}
+{% endif %}

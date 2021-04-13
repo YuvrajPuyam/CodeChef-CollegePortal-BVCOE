@@ -1,0 +1,1 @@
+web: gunicorn ccp.wsgi --log-file -

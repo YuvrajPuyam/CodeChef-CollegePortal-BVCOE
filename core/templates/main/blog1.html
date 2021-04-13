@@ -1,0 +1,125 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block css %}
+<style type="text/css">
+    h1,h2,h3,h4,h5{
+        text-transform: uppercase;
+    }
+    h3{
+        margin:20px auto;
+    }
+    h5{
+
+        margin-bottom: 10px;
+        color:#808080;
+    }
+    strong{
+        font-weight: 550;
+    }
+    .connect{
+        text-align: center;
+        font-weight: 550;
+        text-transform: uppercase;
+    }
+    .connect a{
+        margin:0 50px;
+    }
+    .iconify{
+        font-size: 45px;
+    }
+    .follow {
+        float: right;
+        font-size: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+
+{% block main %}
+<section id="main">
+    <div class="container">
+
+        <!-- Content -->
+            <article class="box post">
+                <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+                <header>
+                    <h2>Importance of Competitive programming</h2>
+                    <p><em>By Pawandeep Singh </em> <a href="https://www.instagram.com/pawandeep19/"><span class="iconify follow" data-icon="cil-user-follow" data-inline="false"></span></a></p>
+                </header>
+
+                <figure>
+                    <blockquote>
+                    <p>Competitive programming is a mind sport usually held over the Internet or a local network, involving participants trying to program according to provided specifications. A programming competition generally involves the host presenting a set of logical or mathematical problems to the contestants who are required to write computer programs capable of solving each problem. Judging is based mostly upon number of problems solved and time spent for writing successful solutions, but may also include other factors.</p>
+                    </blockquote>
+                    <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+                </figure>
+
+                <h3>What does the above statement actually mean?</h3>
+                <p><strong>In simple words: </strong><em>Competitive programming is solving well-defined problems by writing computer programs under specified limits.</em></p>
+                <p><strong>Now consider</strong> Competitive Programming as a sport and consider programming contest as a game of cricket.
+                You walk into bat for the first time. Bowler swings and you miss,but that does not mean you'll leave the field right?<br>You practice by keeping this “swing” in your mind and next time you’ll do much better.</p>   
+                <p><strong>Similarly, </strong>Compile a code and submit. You may get a Wrong answer for the first time. Understand and make changes to code and eventually you will get your right/correct answer.</p>
+
+                <section>
+                    <header>
+                        <h3>Why Competitive programming is Important?</h3>
+                    </header>
+                    <h5>I'll list down some of the most important reasons that why you should start CP.</h5>
+                    <ol>
+                        <li>
+                            <strong>Improves Logic:</strong> Programming logic improves by practice. You are smart from very beginning. With competitive programming you continuously train yourself with algorithmic problems that test the better out of your current logic skills. By practicing more and more your get better and improves your programming logic.
+                        </li>
+
+                        <li>
+                            <strong>Makes you more focused and faster:</strong> Thinking about a problem and finding its solution make you more focused. With an improved logic, you will be able to think faster, solve problems faster, decide faster and put your thinking and solutions into code faster without going to and fro thinking which approach to use for your code.
+                        </li>
+
+                        <li>
+                            <strong>Helps you solve complicated problems:</strong> In programming contests after easy tasks you will solve complex tasks which are not for ordinary programmers. By doing CP you will learn how to solve these out of ordinary tasks. This will help prepare you for a job because you can adopt and solve various kind of problems in various type of situations.
+                        </li>
+
+                        <li>
+                            <strong>Teaches you how to work in teams:</strong> Working in a team is very important skill in every field while in software development it is more important because most jobs will require you at some point to work in a team. CP helps you learn how to effectively work together, as you must work with others on your team to complete the same task. 
+                        </li>
+
+                        <li>
+                            <strong>It will prepare you well for technical interviews:</strong> The standard coding interview has much in common with a programming competition. They both require solving a clearly-defined programming puzzle, tend to focus on well-known algorithms rather than domain-specific technologies, and reward quick solutions.
+                            Make you desirable candidate for major companies: Participating in CP contests make you a desirable candidate for big companies. 
+                        </li>
+
+                        <li>    		
+                            <strong>Competitive programming has an active community:</strong>
+                             Competitive programming has an active community on the major contest sites, and it’s easy for beginners to get questions answered on Quora. Just as the gamified nature of competitive programming encourages participants to keep coming back, having a community to hang out with can encourage sticking with what might otherwise be a solitary deliberate practice effort.
+                        </li>
+
+                    </ol>
+                </section>
+                <section>
+                    <header>
+                        <h3>My recent achievement</h3>
+                    </header>
+                    <p>So,I recently participated in <em>Google Code Jam</em> and guess what! I grabbed a <strong>World Rank- 677 (AIR-35)</strong> in qualification round 2021 </p>
+                    <h3>What do you need?</h3>
+                    <p>In a programming contest you convert plain English sentences into code of your favorite programming language. Walk right into it, you will learn unwritten rules of the game as you play harder and get better. For getting started, you don’t need to know any complex algorithms or data structures. You just need to know a programming language and start competing. As you practice, you fail, you succeed you will learn how to solve complex problems and how to write fast and efficient code.</p>
+
+                    <h5>What are you waiting for?</h5>
+                    <p>Enhance your skills and start practicing on: <a href="https://www.codechef.com/">CodeChef</a></p>
+                    <p class="connect">Join our community: </p>
+                    <p class="connect">
+                        <a href="https://chat.whatsapp.com/GMYXCCUayf91rF0uNOzCz3"><i class="fab fa-whatsapp fa-3x"></i></a>
+                        <a href="https://instagram.com/codechef_bvcoe?igshid=7ezrs996l56n"><i class="fab fa-instagram fa-3x"></i></a>
+                        <a href="https://www.codechef.com/college-chapter/member"><span class="iconify" data-icon="simple-icons:codechef" data-inline="false"></span></a>
+                    </p>
+                </section>
+            </article>
+
+    </div>
+</section>
+
+{% endblock %}

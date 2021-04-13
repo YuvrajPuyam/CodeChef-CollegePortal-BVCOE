@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Profile {% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block main %}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 col-12-medium">
+
+                <!-- Content -->
+                    <article class="box post">
+                        <!-- <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a> -->
+                        
+                        <h2> <i class="far fa-dizzy" style="color: black;"></i> User Not Found  </h2> 
+                        <br>
+                       
+                        <hr>
+                        <h3>Unrated user or user not part of BVCOE </h3>
+
+                    </article>
+            </div>
+            <div class="col-4 col-12-medium">
+
+                <!-- Sidebar -->
+                    <section class="box" style="text-align: center;">
+                        <!-- <a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a> -->
+                       
+                            <a href="{% url 'leaderboard'%}" class="button alt">College Leaderboards</a>
+                        
+                    </section>
+                    
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

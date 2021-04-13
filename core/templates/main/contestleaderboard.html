@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Leaderboards {% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block main %}
+<section id="main">
+    <div class="container">
+        <div  style="display: flex; justify-content: center;">
+        <section style="width: 95%; display: inline-flexbox; justify-content: center;">
+            <h3 style="margin-bottom: 1em; text-decoration: underline;">{{contest.name}} Leaderboard</h3>
+            <div class="table-wrapper" style="display: flex; justify-content: space-between;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>User Name</th>
+                            <th>Score</th>
+                            <th>Contest Rank</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rank in ranks %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td><a class="userlink stars{{rank.user.stars}}" style="color: white;padding:2px 2px;">{{rank.user.stars}}<i class="icon fas fa-star "></i><span class="label"></span></a>&nbsp; <a class="userlink"href="{% url 'profile' rank.user.username %}">{{rank.user.username }}</a></td>
+                            
+                            <td>{{rank.totalScore}}</td>
+                            <td>{{rank.contest_rank}}</td>
+                            <td>{{rank.user.rating }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    </div>
+</section>
+
+
+{% endblock %}

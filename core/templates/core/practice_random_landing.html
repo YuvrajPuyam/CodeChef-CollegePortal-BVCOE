@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Practice {% endblock %}
+
+{% block nav %}
+{% include 'main/nav-base.html' %}
+{% endblock %}
+
+{% block main %}
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="display: flex; justify-content: center;">
+                <div class="custom-card">
+        <h3>General Instructions:</h3>
+        <hr />
+        <ul>
+            <li>This is a three-hour practice coding contest where you can polish your computer programming
+                skills.</li>
+            <li>Generated contest consists of 5 problems of varying difficulties to test
+                your skills and are randomly selected from past CodeChef Cook-offs </li>
+            <li>The problems are randomly selected from the past CodeChef Cook-Offs.</li>
+            <li>All the instructions and rules of a CodeChef Cook-Off are applicable in the practice contest.</li>
+            <li><b> CodeChef API does not provide us with the option to 'submit' problems on behalf of users,
+                    Submit the solution on the CodeChef Platform and click on the 'Check' button in the contest page to confirm.
+                </b>
+            </li>
+
+        </ul>
+        <hr />
+
+        <div style ="text-align: center;">
+            <a class="button submit" href="/contest/practice/random/create">Create a practice contest</a>
+        </div>
+        <hr />
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+{% endblock %}
+{% block post-js %}
+{% include 'core/hard_refresh_on_back_button_click.html' %}
+{% endblock %}

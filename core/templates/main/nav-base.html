@@ -1,0 +1,37 @@
+{% load static %}
+<nav id="nav" style="margin-top:.5em">
+    <ul>
+        <li class=" {% if request.resolver_match.url_name|slice:":4" == "home"%} current {% endif %} middle"><a href="{% url 'home' %}"> Home</a></li>
+        <li class="{% if request.resolver_match.url_name|slice:":4" == "blog"%} current {% endif %} middle" ><a href="{% url 'blog' %}"> Blog</a></li>
+        <li class=" {% if request.resolver_match.url_name|slice:":4" == "prac"%} current {% endif %} middle">
+            {% if is_authenticated %}
+            <a href="{% url 'practicelanding' %}" > Practice   </a>
+            {% else %}
+            <a href="https://api.codechef.com/oauth/authorize?response_type=code&client_id={{client_id}}&state={{state}}&redirect_uri={{redirection_url}}/oauth/success" > Practice   </a>
+            {% endif %}
+        </li>
+        <li class="{% if request.resolver_match.url_name|slice:":4" == "lead"%} current {% endif %} middle">
+            <a href="{% url 'leaderboard' %}">Leaderboards</a>
+            <ul style="text-align: center;">
+                <li><a href="{% url 'leaderboard' %}">College Leaderboards</a></li>
+                <li> <a href="#">Contests</a>
+                    <ul>
+                        {% for contest in contestlb %}
+                        <li><a href="{% url 'leaderboardcontest' contest.code%}">{{ contest.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        {% if is_authenticated %}
+        <!-- {{ request.resolver_match.url_name|slice:":4"}} -->
+        <li class=" {% if request.resolver_match.url_name|slice:":4" == "prof" %} current {% endif %} profile" ><a  href="{% url 'profile' request.user.username %}">Profile</a></li>
+        <li class="login"><a  href="/oauth/logout">Log Out</a></li>
+        {% else %}
+        <li class="login"><a  href="https://api.codechef.com/oauth/authorize?response_type=code&client_id={{client_id}}&state={{state}}&redirect_uri={{redirection_url}}/oauth/success">Log in</a></li>
+        {% endif %}
+        <!-- <li class="login"><a  href="no-sidebar.html">{{ request.resolver_match.url_name|slice:":4" }}</a></li> -->
+
+
+    </ul>
+</nav>
