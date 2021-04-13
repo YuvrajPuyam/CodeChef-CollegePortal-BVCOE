@@ -26,11 +26,21 @@ They are responsible for conducting different activities and engagements to achi
    <li>
       <h5>Landing Page</h5>
       <img src='Screenshots/landing.PNG' width='800' />
+<<<<<<< HEAD
+=======
+    </li>
+    <li>
+>>>>>>> 831c95881d94a1963fd5eb8f477bcc0ac82719bf
       <img src='Screenshots/landing2.PNG' width='800' />
     </li>
    <li>
       <h5>Practice Page</h5>
       <img src='Screenshots/practice.PNG' width='800' />
+<<<<<<< HEAD
+=======
+     </li>
+      <li>
+>>>>>>> 831c95881d94a1963fd5eb8f477bcc0ac82719bf
       <img src='Screenshots/contest.PNG' width='800' />
     </li>
    <li>
