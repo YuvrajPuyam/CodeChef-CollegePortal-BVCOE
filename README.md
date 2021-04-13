@@ -12,7 +12,7 @@ They are responsible for conducting different activities and engagements to achi
 <p>CodeChef Platform Link  <a href="https://www.codechef.com/">CodeChef</a></p>
 <h2>The Gallery of Computation</h2>
 
-<h4>A fully fullstack college Portal. Built with Django, SQLite, CodeChef API to fetch data and Oauth provided by CodeChef</h4>
+<h4>A Fullstack College Portal. Built with Django, SQLite, CodeChef API to fetch data and Oauth provided by CodeChef</h4>
 <h3>Features</h3>
 <ol>
    <li>Fully functional practice section where members can create,participate in contests as well as past contests.</li>
