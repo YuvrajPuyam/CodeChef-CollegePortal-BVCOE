@@ -25,28 +25,28 @@ They are responsible for conducting different activities and engagements to achi
 <ul>
    <li>
       <h5>Landing Page</h5>
-      <img src='/Screenshots/landing.png' width='800' />
-      <img src='/Screenshots/landing2.png' width='800' />
+      <img src='Screenshots/landing.PNG' width='800' />
+      <img src='Screenshots/landing2.PNG' width='800' />
     </li>
    <li>
       <h5>Practice Page</h5>
-      <img src='/Screenshots/practice.png' width='800' />
-      <img src='/Screenshots/contest.png' width='800' />
+      <img src='Screenshots/practice.PNG' width='800' />
+      <img src='Screenshots/contest.PNG' width='800' />
     </li>
    <li>
       <h5>Blog Page</h5>
-      <img src='/Screenshots/blog.png' width='800' />
+      <img src='Screenshots/blog.PNG' width='800' />
     </li>
    <li>
       <h5>Profile Page</h5>
-      <img src='/Screenshots/profile.png' width='800' />
+      <img src='Screenshots/profile.PNG' width='800' />
     </li>
    <li>
       <h5>Leaderboards</h5>
-      <img src='/Screenshots/leaderboards.png' width='800' />
+      <img src='Screenshots/leaderboard.PNG' width='800' />
     </li>
    <li>
       <h5>Footer</h5>
-        <img src='/Screenshots/leaderboard.png' width='800' />   
+        <img src='Screenshots/footer.PNG' width='800' />   
     </li>
 </ul>
