@@ -24,39 +24,33 @@ They are responsible for conducting different activities and engagements to achi
 <h5>College Portal Screenshots</h5>
 <ul>
    <li>
-      <h5>Landing Page</h5>
+      <h4>Landing Page</h4>
       <img src='Screenshots/landing.PNG' width='800' />
-<<<<<<< HEAD
-=======
     </li>
     <li>
->>>>>>> 831c95881d94a1963fd5eb8f477bcc0ac82719bf
       <img src='Screenshots/landing2.PNG' width='800' />
     </li>
    <li>
-      <h5>Practice Page</h5>
+      <h4>Practice Page</h4>
       <img src='Screenshots/practice.PNG' width='800' />
-<<<<<<< HEAD
-=======
      </li>
       <li>
->>>>>>> 831c95881d94a1963fd5eb8f477bcc0ac82719bf
       <img src='Screenshots/contest.PNG' width='800' />
     </li>
    <li>
-      <h5>Blog Page</h5>
+      <h4>Blog Page</h4>
       <img src='Screenshots/blog.PNG' width='800' />
     </li>
    <li>
-      <h5>Profile Page</h5>
+      <h4>Profile Page</h4>
       <img src='Screenshots/profile.PNG' width='800' />
     </li>
    <li>
-      <h5>Leaderboards</h5>
+      <h4>Leaderboards</h4>
       <img src='Screenshots/leaderboard.PNG' width='800' />
     </li>
    <li>
-      <h5>Footer</h5>
+      <h4>Footer</h4>
         <img src='Screenshots/footer.PNG' width='800' />   
     </li>
 </ul>
